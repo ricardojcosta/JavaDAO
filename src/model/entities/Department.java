@@ -35,7 +35,7 @@ public class Department implements Serializable {
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 41 * hash + this.id;
+        hash = 29 * hash + this.id;
         return hash;
     }
 
@@ -56,6 +56,12 @@ public class Department implements Serializable {
         }
         return true;
     }
+
+  
+
+  
+
+  
 
     @Override
     public String toString() {

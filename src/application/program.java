@@ -1,7 +1,7 @@
 
 package application;
 
-import java.sql.Date;
+import java.util.List;
 import model.dao.DaoFactory;
 import model.dao.SellerDao;
 import model.entities.Department;
@@ -17,6 +17,13 @@ public class program {
         Seller seller = vendedorDao.findById(1);
         
         System.out.println(seller);
+        
+        System.out.println("==== Teste 2: Vendedor por Departamento ====");
+        Department dep = new Department(2, null);
+        List<Seller> lista = vendedorDao.findByDepartment(dep);
+        for (Seller obj : lista){
+            System.out.println(obj);
+        }
     }
     
 }
