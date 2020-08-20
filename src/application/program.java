@@ -1,6 +1,5 @@
 package application;
 
-
 import java.util.Date;
 import java.util.List;
 import model.dao.DaoFactory;
@@ -25,17 +24,24 @@ public class program {
         for (Seller obj : lista) {
             System.out.println(obj);
         }
-        
+
         System.out.println("==== Teste 3: Todos vendedores ====");
         lista = vendedorDao.findAll();
         for (Seller obj : lista) {
             System.out.println(obj);
         }
-        System.out.println("==== Teste 3: Teste insersão ====");
-        Seller novoVendedor = new Seller(0 , "Joana", "joana@gmail.com", new Date(), 4000.0, dep);
+        System.out.println("==== Teste 4: Teste insersão ====");
+        Seller novoVendedor = new Seller(0, "Joana", "joana@gmail.com", new Date(), 4000.0, dep);
         vendedorDao.insert(novoVendedor);
-        System.out.println("Inserido! Novo id = "+novoVendedor.getId() );
+        System.out.println("Inserido! Novo id = " + novoVendedor.getId());
+
+        System.out.println("==== Teste 5: Teste Update ====");
+        seller = vendedorDao.findById(1);
+        seller.setName("Marciana");
+        vendedorDao.update(seller);
+        System.out.println("Atualização completada");
+        
+        
+        
     }
 }
-
-
