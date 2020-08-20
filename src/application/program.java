@@ -34,7 +34,7 @@ public class program {
         }
         System.out.println("==== Teste 4: Teste insersão ====");
         Seller novoVendedor = new Seller(0, "Joana", "joana@gmail.com", new Date(), 4000.0, dep);
-        //vendedorDao.insert(novoVendedor);
+        vendedorDao.insert(novoVendedor);
         System.out.println("Inserido! Novo id = " + novoVendedor.getId());
 
         System.out.println("==== Teste 5: Teste Update ====");
